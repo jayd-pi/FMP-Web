@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   formLogin!: FormGroup;
   constructor(private auth: AuthService, private form: FormBuilder, private router: Router) {
     this.formLogin = this.form.group({
-      username: ['', [Validators.required]],
-      password: ['', [Validators.required]]
+      username: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required,Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]]
     })
   }
   getControl(name: any): AbstractControl | null {
