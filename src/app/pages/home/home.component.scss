@@ -1,0 +1,130 @@
+$small-screen: 576px;
+
+/* Container styles */
+
+.container {
+  text-align: center;
+
+  &.text-center {
+    text-align: center;
+  }
+
+  h1.display-5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0.2px solid grey;
+  height: 350px;
+  width: 90%;
+  position: relative;
+  padding: 20px;
+  margin: 30px;
+  img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
+
+  img#productImg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 200px;
+    transform: scale(0.9);
+    border-radius: 20%;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 15px;
+  }
+
+  .card-body {
+    padding: 1rem;
+
+    h6.card-title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    p.card-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Responsive layout for columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-md-3 {
+    width: 25%;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    .row-content{
+      border: 0.1px solid dark;
+      display: block;
+      background-color: rgb(239, 250, 250);
+    }
+  }
+  button{
+    margin-left: 195px;
+    padding: 4px 8px;
+  }
+}
+
+.card-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+  border: 0.01px solid dark;
+}
+.item img {
+  width: 100%;
+}
+
+.item {
+  margin: 0px 15px;
+  text-align: center;
+  cursor: pointer;
+  h6{
+    font-size: 14px;
+  }
+}
+
+.item a:hover {
+  color: blue;
+}
+
+
+@media (max-width: 768px) {
+  /* Reduce the font size of the category headings and product titles */
+  .card-top .item h6 {
+    font-size: 12px;
+  }
+
+  /* Wrap the product cards in a col-12 class to make them stack on top of each other */
+  .container .row .col-md-3 {
+    width: 100%;
+  }
+
+  /* Increase the padding around the product card content to make it easier to tap on the products */
+  .container .row .card {
+    padding: 16px;
+  }
+
+  /* Remove the row-content class from the product cards */
+  .container .row .card {
+    row-content: normal;
+  }
+}

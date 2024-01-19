@@ -1,0 +1,45 @@
+// Variables
+$primary-color: rgb(68, 201, 165);
+$secondary-color: green;
+$table-striped-row-background-color: #f5f5f5;
+
+// Mixins
+@mixin table-striped-row {
+  background-color: $table-striped-row-background-color;
+}
+
+// Base styles
+body {
+  font-family: sans-serif;
+}
+
+// Component styles
+.card {
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid $secondary-color;
+  padding: 5px;
+}
+
+.table thead th {
+  background-color: $primary-color;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  @include table-striped-row;
+}

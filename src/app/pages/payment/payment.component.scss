@@ -1,0 +1,36 @@
+.paypal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #787676;
+  margin: 15rem 0 0 12rem;
+  .info {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .back {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

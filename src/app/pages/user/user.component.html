@@ -1,0 +1,33 @@
+<div class="card card-custom example example-compact gutter-b">
+  <div class="card-body">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">FirstName</th>
+          <th scope="col">LastName</th>
+          <th scope="col">Password</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Street</th>
+          <th scope="col">Address</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="user">
+                <td>{{user.username}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phonenumber}}</td>
+                <td>{{user.street}}</td>
+                <td>{{user.address}}</td>
+            </tr>
+          <div *ngIf="!user">
+            <p>Loading information .........</p>
+          </div>
+        </tbody>
+      </table>
+  </div>
+</div>
